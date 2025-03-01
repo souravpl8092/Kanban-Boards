@@ -1,11 +1,19 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { signupUser, loginUser } from "../../api/authApi";
+import axios from "axios";
 
+const API_URL = `${import.meta.env.VITE_API_URL}/api/auth`;
+
+// ✅ Async Thunk for Signup
 export const signup = createAsyncThunk(
   "auth/signup",
   async ({ name, email, password }, { rejectWithValue }) => {
     try {
-      const data = await signupUser(name, email, password);
+      const response = await axios.post(`${API_URL}/register`, {
+        name,
+        email,
+        password,
+      });
+      const data = response.data;
       if (!data || !data.user || !data.token) {
         throw new Error("Invalid response format from server");
       }
@@ -15,7 +23,7 @@ export const signup = createAsyncThunk(
         return rejectWithValue("Email already in use! Try logging in.");
       }
       return rejectWithValue(
-        error.message || "Signup failed. Please try again."
+        error.response?.data?.message || "Signup failed. Please try again."
       );
     }
   }
@@ -26,14 +34,18 @@ export const login = createAsyncThunk(
   "auth/login",
   async ({ email, password }, { rejectWithValue }) => {
     try {
-      const data = await loginUser(email, password);
+      const response = await axios.post(`${API_URL}/login`, {
+        email,
+        password,
+      });
+      const data = response.data;
       if (!data || !data.user || !data.token) {
         throw new Error("Invalid response format from server");
       }
       return data;
     } catch (error) {
       return rejectWithValue(
-        error.message || "Login failed. Please try again."
+        error.response?.data?.message || "Login failed. Please try again."
       );
     }
   }
