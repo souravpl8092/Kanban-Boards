@@ -1,0 +1,135 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal Content Box */
+.list-modal-content {
+  background: white;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal Header */
+.list-modal-content h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #635dff;
+}
+
+.list-modal-content h3 {
+  text-align: left;
+  margin-bottom: 15px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #91817d;
+}
+
+.list-modal-content p {
+  text-align: left;
+  margin-bottom: 15px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #91817d;
+}
+
+/* Input Fields */
+.list-modal-content input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+/* Submit Button */
+.list-modal-content button {
+  padding: 10px;
+  background: #635dff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 10px;
+}
+
+.list-modal-content button:hover {
+  background: #5148e1;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.list-modal-content button {
+  width: 95%;
+}
+
+.list-modal-content input {
+  width: 90%;
+}
+
+.list-modal-actions {
+  display: flex;
+  justify-content: right;
+  gap: 10px;
+}
+
+.close-icon {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #91817d;
+}
+
+.close-icon:hover {
+  color: #635dff;
+}
+
+.list-modal-actions button {
+  width: auto !important;
+}
+
+.list-modal-actions .delete-btn {
+  background: #e63946;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 10px;
+}
+
+.list-modal-actions .delete-btn:hover {
+  background: #c62830;
+}

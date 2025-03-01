@@ -1,0 +1,62 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  background: linear-gradient(to bottom right, #635dff, white);
+  text-align: center;
+  padding: 20px;
+}
+
+/* Header */
+.home-header h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #635dff;
+  margin-bottom: 10px;
+}
+
+.home-header p {
+  font-size: 1.2rem;
+  color: #91817d;
+  opacity: 0.9;
+}
+
+/* Buttons */
+.home-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+.home-buttons button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+/* Login Button */
+.login-btn,
+.signup-btn {
+  background: #635dff;
+  color: white;
+}
+
+.login-btn:hover,
+.signup-btn:hover {
+  background: #5048e5;
+}
+
+/* Icons */
+.button-icon {
+  font-size: 1.2rem;
+  color: white;
+}

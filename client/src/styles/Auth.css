@@ -1,0 +1,154 @@
+/* Input Fields */
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f3f3f3;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.input-group input {
+  border: none;
+  background: none;
+  outline: none;
+  flex: 1;
+  font-size: 1rem;
+  padding-right: 35px;
+}
+
+/* Icons */
+.icon {
+  font-size: 1.2rem;
+  color: #91817d;
+}
+
+/* Buttons */
+.auth-btn {
+  width: 100%;
+  background: #635dff;
+  color: white;
+  font-size: 1rem;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.auth-btn:hover {
+  background: #5048e5;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+  color: #91817d;
+  font-size: 1.2rem;
+}
+
+.eye-icon:hover {
+  color: #635dff;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modal Box */
+.auth-modal-content {
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  width: 380px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Icon */
+.close-icon {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #91817d;
+}
+
+.close-icon:hover {
+  color: #635dff;
+}
+
+.switch-text {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #91817d;
+}
+
+.switch-text span {
+  color: #635dff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.switch-text span:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 10px;
+  background: #635dff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-btn:disabled {
+  background: #91817d;
+  cursor: not-allowed;
+}

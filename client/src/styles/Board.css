@@ -1,0 +1,207 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+.kanban-container {
+  display: flex;
+  gap: 20px;
+  /* gap: 2.5%; */
+  padding: 0% 5%;
+  background-color: white;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 90%;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #635dff;
+  padding-bottom: 20px;
+}
+
+.kanban-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.kanban-container::-webkit-scrollbar-thumb {
+  background-color: #635dff;
+  border-radius: 4px;
+}
+
+.kanban-container::-webkit-scrollbar-track {
+  background-color: #e0e0e0;
+}
+
+.kanban-list {
+  flex: 0 0 320px;
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  background: #f5f5f5;
+  margin-top: 15px;
+  gap: 12px;
+  max-height: 65vh;
+  flex-shrink: 0;
+  min-width: 350px;
+}
+
+.kanban-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #ddd;
+  margin-bottom: 10px;
+  border-color: #635dff;
+}
+
+.kanban-list-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.list-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #635dff;
+}
+
+.task-count {
+  font-size: 12px;
+  font-weight: bold;
+  background: #e9e9e9;
+  color: #91817d;
+  padding: 4px 0px;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+}
+
+.kanban-list-header h2 {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  padding: 0px 5px;
+}
+
+.kanban-list-header .indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.task-comments {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dots-menu {
+  font-size: 18px;
+  cursor: pointer;
+  color: #777;
+  transition: 0.2s;
+}
+
+.dots-menu:hover {
+  color: #333;
+}
+
+.kanban-list-actions {
+  display: flex;
+  justify-content: right;
+  gap: 4%;
+  padding-top: 10px;
+  margin-top: auto;
+  border-top: 1px solid #e0e0e0;
+}
+
+.add-list-btn {
+  background-color: white;
+  display: flex;
+  justify-content: right;
+  padding: 1.5% 3%;
+}
+
+.add-list-btn button,
+.edit-list-btn,
+.delete-list-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.edit-list-btn,
+.add-list-btn button {
+  background: #635dff;
+  color: white;
+}
+
+.edit-list-btn:hover,
+.add-list-btn button:hover {
+  background: #5348e1;
+}
+
+.delete-list-btn {
+  background: #e63946;
+  color: white;
+}
+
+.delete-list-btn:hover {
+  background: #c62830;
+}
+
+.no-data-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.no-data {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #777;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.no-data:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}

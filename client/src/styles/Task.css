@@ -1,0 +1,145 @@
+.kanban-tasks {
+  display: flex;
+  flex-direction: column;
+  cursor: grab;
+  gap: 20px;
+  height: 500px;
+  overflow-y: auto;
+  padding-right: 8px;
+  max-height: 400px;
+}
+
+.kanban-tasks::-webkit-scrollbar {
+  width: 8px;
+}
+
+.kanban-tasks::-webkit-scrollbar-track {
+  background: #e0e0e0;
+  border-radius: 10px;
+}
+
+.kanban-tasks::-webkit-scrollbar-thumb {
+  background-color: #635dff;
+  border-radius: 10px;
+}
+
+.kanban-tasks::-webkit-scrollbar-thumb:hover {
+  background: #7a6b67;
+}
+
+.kanban-task {
+  background: white;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease-in-out;
+  border: 1px solid #e5e7eb;
+  position: relative;
+}
+
+.kanban-task:hover {
+  transform: translateY(-3px);
+}
+
+.kanban-task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.kanban-task h3 {
+  font-size: 15px;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 6px;
+}
+
+.kanban-task p {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+.task-due-date {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: #f3f4f6;
+  color: #6b7280;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.task-priority {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.priority-low {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.priority-medium {
+  background: #ffe599;
+  color: #b98100;
+}
+
+.priority-high {
+  background: #fde2e2;
+  color: #b91c1c;
+}
+
+.add-task-btn {
+  font-size: 12px;
+  background: #d4cef2;
+  color: #635dff;
+  padding: 6px 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.add-task-btn:hover {
+  background: #7169e2;
+  color: white;
+}
+
+.task-actions {
+  display: flex;
+  justify-content: right;
+  margin-top: 10px;
+}
+
+.edit-task-btn,
+.delete-task-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #91817d;
+  transition: color 0.3s ease-in-out;
+}
+
+.edit-task-btn:hover,
+.delete-task-btn:hover {
+  color: #635dff;
+}
+
+.no-tasks {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #666;
+  background-color: #f8f9fa;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 10px 0;
+  border: 1px dashed #ccc;
+}
